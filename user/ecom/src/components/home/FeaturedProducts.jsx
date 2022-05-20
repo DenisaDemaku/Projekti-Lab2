@@ -93,7 +93,12 @@ class FeaturedProducts extends Component {
                   className="center"
                   src="https://rukminim1.flixcart.com/image/416/416/kd69z0w0/mobile/a/n/g/mi-redmi-note-9-b086982zkf-original-imafu4qf8gfcutde.jpeg?q=70"
                 />
-             
+                <Card.Body>
+                  <p className="product-name-on-card">
+                    Realme C21 (Cross Black, 64 GB)
+                  </p>
+                  <p className="product-price-on-card">Price : $120</p>
+                </Card.Body>
               </Card>
             </Col>
           </Row>
