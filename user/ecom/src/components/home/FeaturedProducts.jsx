@@ -22,8 +22,8 @@ class FeaturedProducts extends Component {
                   <p className="product-name-on-card">
                     Realme C21 (Cross Black, 64 GB)
                   </p>
+                  <p className="product-price-on-card">Price : $120</p>
                 </Card.Body>
-                <p className="product-price-on-card">Price : $120</p>
               </Card>
             </Col>
 
