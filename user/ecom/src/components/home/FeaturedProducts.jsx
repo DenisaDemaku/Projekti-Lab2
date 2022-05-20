@@ -73,7 +73,7 @@ class FeaturedProducts extends Component {
             </Col>
 
             <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-              <Card className="image-box card">
+             
                 <img
                   className="center"
                   src="https://rukminim1.flixcart.com/image/416/416/knrsjgw0/mobile/f/o/w/8-5g-rmx3241-realme-original-imag2d8eksc2szzy.jpeg?q=70"
