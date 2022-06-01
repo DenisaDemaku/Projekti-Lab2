@@ -59,6 +59,12 @@ class NavMenuDesktop extends Component {
                 </Col>
 
                 <Col className="p-1 mt-1" lg={4} md={4} sm={12} xs={12}>
+                  <Link to="/" className="btn">
+                    <i className="fa h4 fa-heart"></i>
+                    <sup>
+                      <span className="badge text-white bg-danger">3</span>
+                    </sup>
+                  </Link>
                   <div className="input-group w-100">
                     <input type="text" className="form-control" />
                     <Button type="button" className="btn site-btn">
