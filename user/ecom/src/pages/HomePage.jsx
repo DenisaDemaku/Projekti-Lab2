@@ -9,7 +9,7 @@ export class HomePage extends Component {
      render() {
           return (
                <Fragment>
-                      <HomeTop />
+                    <HomeTop />
                     <FeaturedProducts />
                     <NewArrival />
                     <Collection />

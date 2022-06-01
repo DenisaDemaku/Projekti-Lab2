@@ -10,4 +10,4 @@ class Slider extends Component {
      }
 }
 
-export default Slide
+export default Slider
