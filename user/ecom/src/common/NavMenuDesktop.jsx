@@ -1,8 +1,9 @@
+import React, { Component, Fragment } from 'react'
 import {Navbar,Container, Row, Col} from 'react-bootstrap';
-import Logo from '../../assets/images/easyshop.png';
+import Logo from '../../assets/images/medicalsupplies.png';
 import {Link} from "react-router-dom";
 
- class NavMenuDesktop extends Component {
+class NavMenuDesktop extends Component {
      render() {
           return (
                <Fragment>
@@ -32,5 +33,4 @@ import {Link} from "react-router-dom";
                          )
                     }
                }
-               
-export default NavMenuDesktop
+               export default NavMenuDesktop
