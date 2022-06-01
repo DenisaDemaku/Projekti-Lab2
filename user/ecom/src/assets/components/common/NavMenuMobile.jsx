@@ -61,17 +61,16 @@ class NavMenuMobile extends Component {
             </Row>
           </Container>
 
-         <div className={this.state.SideNavState}>
-                sdfsdf
-          </div>
-          <div onClick={this.ContentOverlayClickHandler} className={this.state.ContentOverState}>
-
-               </div>
-               </div>
+          <div className={this.state.SideNavState}>sdfsdf</div>
+          <div
+            onClick={this.ContentOverlayClickHandler}
+            className={this.state.ContentOverState}
+          ></div>
+        </div>
         */*{" "}
       </Fragment>
     );
   }
-} 
+}
 
 export default NavMenuMobile;
