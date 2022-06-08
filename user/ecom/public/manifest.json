@@ -1,7 +1,7 @@
 {
-  "short_name": "Easy Ecommerce",
-  "name": "Easy Ecommerce",
-  "description": "Easy Ecommerce System",
+  "short_name": "Medical Supplies",
+  "name": "Medical Supplies",
+  "description": "Medical Supplies System",
   "lang": "en-US",
   "start_url": "/",
   "display": "standalone",
