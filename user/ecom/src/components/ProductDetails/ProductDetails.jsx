@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import { Container,Row,Col, Form,Button } from 'react-bootstrap'
 import Product1 from '../../assets/images/product/product1.png'
-import Product2 from '../../assets/images/product/product2.png'
-import Product3 from '../../assets/images/product/product3.png'
-import Product4 from '../../assets/images/product/product4.png'
+import Product2 from '../../assets/images/product/product2.jpg'
+import Product3 from '../../assets/images/product/product3.jpg'
+import Product4 from '../../assets/images/product/product4.jpg'
 class ProductDetails extends Component {
      render() {
           return (
@@ -32,7 +32,7 @@ class ProductDetails extends Component {
           </Container>
           </Col>
           <Col className="p-3 " md={6} lg={6} sm={12} xs={12}>
-          <h5 className="Product-Name">ASUS TUF A15 FA506IU Ryzen 7 4800H GTX</h5>
+          <h5 className="Product-Name">TymPRO+ Tympanic Thermometer</h5>
           <h6 className="section-sub-title">Some Of Our Exclusive Collection, You May Like Some Of Our Exclusive Collectio</h6>
           <div className="input-group">
                <div className="Product-price-card d-inline ">Reguler Price 200</div>
