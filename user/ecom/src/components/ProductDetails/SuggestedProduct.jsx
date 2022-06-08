@@ -16,10 +16,10 @@ class SuggestedProduct extends Component {
      <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
           <Link to="/productdetails">
      <Card className="image-box card">
-          <img className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/q/j/x/c21-rmx3201-realme-original-imagfxfwbszrxkvu.jpeg?q=70" />   
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/4/04-50-6602_4.jpg" />   
           <Card.Body> 
-          <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-          <p className="product-price-on-card">Price : $120</p>
+          <p className="product-name-on-card">Clinton Blood Drawing Chair with Flip Arm and Drawer </p>
+          <p className="product-price-on-card">Price : 450€</p>
                
           </Card.Body>
           </Card>
@@ -30,33 +30,23 @@ class SuggestedProduct extends Component {
 
      <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
      <Card className="image-box card">
-          <img className="center" src="https://rukminim1.flixcart.com/image/416/416/knm2s280/mobile/j/x/c/hot-10-play-x688b-infinix-original-imag29gxqzuxkmnk.jpeg?q=70" />   
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/46c67a7e014cd6344be7c367252caa28/0/2/02-24-1835.jpg" />   
           <Card.Body> 
-          <p className="product-name-on-card">Realme C21 (Cross Blue, 64 GB)</p>
-          <p className="product-price-on-card">Price : $120</p>
+          <p className="product-name-on-card">TymPRO+ Tympanic Thermometer</p>
+          <p className="product-price-on-card">Price : 42.99</p>
                
           </Card.Body>
           </Card>
+               
+               
      </Col>
 
      <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
      <Card className="image-box card">
-          <img className="center" src="https://rukminim1.flixcart.com/image/416/416/kn7sdjk0/mobile/g/r/g/c21-rmx3201-realme-original-imagfxfwn9aryyda.jpeg?q=70" />   
+          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/6/06-93-1090.jpg" />   
           <Card.Body> 
-          <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-          <p className="product-price-on-card">Price : $120</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
-
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://rukminim1.flixcart.com/image/416/416/knm2s280/mobile/v/l/u/hot-10-play-x688b-infinix-original-imag29hfaedkgdfe.jpeg?q=70" />   
-          <Card.Body> 
-          <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-          <p className="product-price-on-card">Price : $120</p>
+          <p className="product-name-on-card">Demo Dose® Steril Water 3000mL </p>
+          <p className="product-price-on-card">Price : 1.20€</p>
                
           </Card.Body>
           </Card>
@@ -65,10 +55,10 @@ class SuggestedProduct extends Component {
 
      <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
      <Card className="image-box card">
-          <img className="center" src="https://rukminim1.flixcart.com/image/416/416/knrsjgw0/mobile/f/o/w/8-5g-rmx3241-realme-original-imag2d8eksc2szzy.jpeg?q=70" />   
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/46c67a7e014cd6344be7c367252caa28/0/6/06-82-5155.jpg" />   
           <Card.Body> 
-          <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-          <p className="product-price-on-card">Price : $120</p>
+          <p className="product-name-on-card">Needle 22G x 1" Regular Bevel Sterile</p>
+          <p className="product-price-on-card">Price : 1.20€</p>
                
           </Card.Body>
           </Card>
@@ -77,10 +67,22 @@ class SuggestedProduct extends Component {
 
      <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
      <Card className="image-box card">
-          <img className="center" src="https://rukminim1.flixcart.com/image/416/416/kd69z0w0/mobile/a/n/g/mi-redmi-note-9-b086982zkf-original-imafu4qf8gfcutde.jpeg?q=70" />   
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/1/1/11-81-3890.jpg" />   
           <Card.Body> 
-          <p className="product-name-on-card">Realme C21 (Cross Black, 64 GB)</p>
-          <p className="product-price-on-card">Price : $120</p>
+          <p className="product-name-on-card">Life/form® Complete Child CriSis Mankin with IV Arm </p>
+          <p className="product-price-on-card">Price : 180€</p>
+               
+          </Card.Body>
+          </Card>
+     </Col>
+
+
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Card className="image-box card">
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/1/01-37-3000.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">Pocket Nurse® Pre-Filled IV Therapy Tote </p>
+          <p className="product-price-on-card">Price : 40€</p>
                
           </Card.Body>
           </Card>
