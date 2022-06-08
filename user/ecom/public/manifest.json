@@ -1,11 +1,11 @@
 {
-  "short_name": "Medical Supplies Online",
-  "name": "Medical Supplies Online",
-  "description": "Medical Supplies Online System",
-  "lang": "en US",
-  "start_url": ".",
+  "short_name": "Easy Ecommerce",
+  "name": "Easy Ecommerce",
+  "description": "Easy Ecommerce System",
+  "lang": "en-US",
+  "start_url": "/",
   "display": "standalone",
-  "orientation":"portrait",
+  "orientation": "portrait",
   "theme_color": "#002e62",
   "background_color": "#ffffff",
   "icons": [
@@ -58,7 +58,6 @@
       "src": "512.png",
       "sizes": "512x512",
       "type": "image/png"
-    }
+    }     
   ]
-
 }

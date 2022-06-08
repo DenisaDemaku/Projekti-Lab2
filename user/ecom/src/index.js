@@ -9,9 +9,10 @@ import '../src/assets/css/animate.min.css';
 
 ReactDOM.render(
   <React.StrictMode>
-  <App />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 reportWebVitals();

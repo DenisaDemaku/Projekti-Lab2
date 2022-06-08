@@ -6,15 +6,13 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-      <BrowserRouter>
-      <AppRoute />         
-      </BrowserRouter>
+        <BrowserRouter>
+        <AppRoute />         
+        </BrowserRouter>
 
-    </Fragment>
-      
+      </Fragment>
     )
   }
 }
-
 
 export default App

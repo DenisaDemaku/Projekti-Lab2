@@ -8,9 +8,14 @@
 @import "navMenuDesktop.css";
 @import "navMenuMobile.css";
 @import "typo.css";
+@import "megaMenuMobile.css";
 @import "responsive.css";
 @import "megaMenuAll.css";
+@import "onboard.css";
+@import "common.css";
+@import "productDetails.css";
+@import "cartList.css";
 
 body{
-   background-color: #ffffff;
+     background-color: #ffffff;
 }

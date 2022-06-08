@@ -1,5 +1,5 @@
 @media (max-width: 374.98px) { 
-
+     
      .Mobile{
 
      }
@@ -15,7 +15,7 @@
      .Desktop{
           display: none;
           }  
-
+  
 }
 
 
@@ -35,10 +35,10 @@
           display: none;
      }
      .Desktop{
-
+          
      }
-
-
+    
+   
 }
 
 
@@ -47,9 +47,9 @@
           display: none;
      }
      .Desktop{
-
+          
      }
-
+    
 }
 
 
@@ -58,7 +58,7 @@
           display: none;
      }
      .Desktop{
-
+          
      }
 
 }
