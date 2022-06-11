@@ -13,8 +13,8 @@ export class Contact extends Component {
                     <Row className="text-center">
              <Col className="d-flex justify-content-center" md={6} lg={6} sm={12} xs={12}>
      <Form className="onboardForm">
-          <h4 className="section-title-login">CONTACT WITH US </h4>
-          <h6 className="section-sub-title">Please Contact With Us </h6>
+          <h4 className="section-title-login">Contact us </h4>
+          <h6 className="section-sub-title">Please Contact Us </h6>
           <input className="form-control m-2" type="text" placeholder="Enter Mobile Number" />
 
           <input className="form-control m-2" type="email" placeholder="Enter Email" />
@@ -35,8 +35,8 @@ Email: medicalsupplies@gmail.com
            </p>
 
 
-           <iframe src="https://www.google.com/maps/d/u/0/viewer?mid=1_1pH-6o8u3UeIzGtvBZZkPDjnu3NqoIX&ll=42.54827900995879%2C21.095989500000005&z=9" width="550" height="450" styles="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5869.895724488557!2d21.170514!3d42.641265250000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ebf2c04f9a5%3A0x616a4daac86440c8!2sLagjja%20s!4v1654982154343!5m2!1sen!2s" width="550" height="450" styles="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         
                          </Col>
                     </Row>
      
