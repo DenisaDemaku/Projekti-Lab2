@@ -1,7 +1,30 @@
 import React, { Component, Fragment } from 'react'
 import { Container,Row,Col, Form,Button } from 'react-bootstrap'
+import AppURL from '../../api/AppURL';
+import axios from 'axios'
+import ReactHtmlParser from 'react-html-parser';
 
 export class Purchase extends Component {
+     constructor(){
+          super();
+          this.state={
+               purchase:""
+          }
+     }
+
+     componentDidMount(){
+          axios.get(AppURL.AllSiteInfo).then(response =>{
+               let StatusCode = response.status;
+               if(StatusCode==200){
+                    let JsonData = (response.data)[0]['parchase_guide'];
+                    this.setState({purchase:JsonData});
+               } 
+
+          }).catch(error=>{
+
+          });
+     }
+
      render() {
           return (
                <Fragment>
@@ -10,7 +33,7 @@ export class Purchase extends Component {
             <Col className="shadow-sm bg-white mt-2" md={12} lg={12} sm={12} xs={12}>
       <h4 className="section-title-login">Purchase Page </h4>
       <p className="section-title-contact">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      { ReactHtmlParser(this.state.purchase) }
       </p>
      
      
