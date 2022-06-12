@@ -70,7 +70,7 @@ import MegaMenuAll from '../home/MegaMenuAll';
 
                    <Link to="/notification" className="btn"><i className="fa h4 fa-bell"></i><sup><span className="badge text-white bg-danger">5</span></sup>                  
                    </Link>
-                   <a className="btn"><i className="fa h4 fa-mobile-alt"></i></a>
+                   {/*    <a className="btn"><i className="fa h4 fa-mobile-alt"></i></a>  */} 
                    <Link to="/login" className="h4 btn">Login</Link>
                    
        <Link to="/cart" className="cart-btn"><i className="fa fa-shopping-cart"></i> 3 Items </Link>
