@@ -6,7 +6,7 @@ class Categories extends Component {
           return (
                <Fragment>
                   <Container className="text-center" fluid={true}>
-          <div className="section-title text-center mb-55"><h2> CATEGORIES</h2>
+          <div className="section-title text-center mb-55"><h2> Categories</h2>
           <p>Some of our exclusive collection, you may Like</p>
           </div>
 
@@ -92,8 +92,8 @@ class Categories extends Component {
           <Col className="p-0" key={1} xl={3} lg={3} md={3} sm={6} xs={6}>
           <Card className="h-100 w-100 text-center">          
           <Card.Body> 
-          <img className="center" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100" />  
-          <h5 className="category-name">Beauty</h5>  
+          <img className="center" src="https://cdn1.iconfinder.com/data/icons/health-conditions-diseases-3/256/40-512.png" />  
+          <h5 className="category-name">Physiotherapy & Rehabilitation </h5>  
           </Card.Body>
           </Card> 
           </Col> 

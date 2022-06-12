@@ -63,7 +63,7 @@ class NewArrival extends Component {
           return ( 
                <Fragment>
           <Container className="text-center" fluid={true}>
-          <div className="section-title text-center mb-55"><h2>NEW ARRIVAL &nbsp;
+          <div className="section-title text-center mb-55"><h2>New Arrival &nbsp;
 
 <a className="btn btn-sm ml-2 site-btn" onClick={this.previous} ><i className="fa fa-angle-left"></i></a>
 &nbsp;
