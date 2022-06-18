@@ -2,15 +2,10 @@ import React, { Component, Fragment } from 'react'
 
 class MegaMenu extends Component {
 
-     constructor(){
+     constructor(props){
           super();
-          this.MegaMenu = this.MegaMenu.bind(this);
+         
      }
-
-     componentDidMount(){
-          this.MegaMenu();
-     }
-
 
 
      MegaMenu(){
@@ -32,203 +27,38 @@ class MegaMenu extends Component {
 
 
      render() {
-          return (
-              <div className="accordionMenuDiv">
-                   <div className="accordionMenuDivInside">
 
+          const CatList = this.props.data;
 
-           <button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
+          const MyView = CatList.map((CatList,i)=>{
+               return <div key={i.toString()}>
+      <button className="accordion">
+      <img className="accordionMenuIcon" src={CatList.category_image} />&nbsp; {CatList.category_name}
+                   </button>
+                   <div className="panel">
+      <ul>
           <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
           <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
+          </ul>
+         </div> 
+
+               </div>
 
 
 
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
-
-
-
-<button className="accordion">
-                 <img className="accordionMenuIcon" src="https://cdn.iconscout.com/icon/free/png-256/grid-select-selection-app-application-menu-interface-3-14061.png" />&nbsp; Category 
-                        </button>
-<div className="panel">
-     <ul>
-          <li><a href="#" className="accordionItem" > Subcategory 1</a></li>
-          <li><a href="#" className="accordionItem" > Subcategory 2</a></li>
-     </ul>
-</div>
+           });
 
 
 
 
 
+           return (
+               <div className="accordionMenuDiv">
+                    <div className="accordionMenuDivInside">
 
+                    {MyView}
 
-
-
-
-
-
-
-                   </div>
+                    </div>
 
               </div>
           )
