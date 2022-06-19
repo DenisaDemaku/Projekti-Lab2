@@ -1,96 +1,83 @@
 import React, { Component, Fragment } from 'react'
 import {Container,Row,Col,Card} from 'react-bootstrap'
+import AppURL from "../../api/AppURL";
+import axios from "axios";
 
 class FeaturedProducts extends Component {
-     render() {
-          return (
-              <Fragment>
-                   <Container className="text-center" fluid={true}>
-          <div className="section-title text-center mb-55"><h2>Featured Product</h2>
-          <p>Some of our exclusive collection, you may like</p>
+    constructor(){
+          super();
+          this.state={
+               ProductData:[]               
+          }
+     }
+
+
+     componentDidMount(){
+          axios.get(AppURL.ProductListByRemark("FEATURED")).then(response =>{
+
+               this.setState({ProductData:response.data});         
+
+          }).catch(error=>{
+
+
+
+
+           });
+     }
+
+
+  render() {
+      const FeaturedList = this.state.ProductData;
+          const MyView = FeaturedList.map((FeaturedList,i)=>{
+
+          if(FeaturedList.special_price=="na"){
+               return  <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+               <Link to="/productdetails">
+    <Card className="image-box card">
+    <img className="center" src={FeaturedList.image} />   
+    <Card.Body> 
+   <p className="product-name-on-card">{FeaturedList.title}</p>
+    <p className="product-price-on-card">Price : ${FeaturedList.price}</p>
+
+    </Card.Body>
+     </Card>
+     </Link>
+          </Col>
+
+          }
+          else{
+
+               return  <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+               <Link to="/productdetails">
+    <Card className="image-box card">
+    <img className="center" src={FeaturedList.image} />   
+    <Card.Body> 
+   <p className="product-name-on-card">{FeaturedList.title}</p>
+    <p className="product-price-on-card">Price : <strike className="text-secondary">${FeaturedList.price}</strike> ${FeaturedList.special_price}</p>
+
+    </Card.Body>
+     </Card>
+     </Link>
+          </Col>
+
+          } 
+
+
+          });
+
+
+    return (
+      <Fragment>
+        <Container className="text-center" fluid={true}>
+          <div className="section-title text-center mb-55">
+            <h2>FEATURED PRODUCT</h2>
+            <p>Some Of Our Exclusive Collection, You May Like</p>
           </div>
 
-
-     <Row>
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/46c67a7e014cd6344be7c367252caa28/0/2/02-24-1835.jpg" />   
-          <Card.Body> 
-          <p className="product-name-on-card">TymPRO+ Tympanic Thermometer</p>
-          <p className="product-price-on-card">Price : 42.99</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
-
-
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/46c67a7e014cd6344be7c367252caa28/0/6/06-82-5155.jpg" />   
-          <Card.Body> 
-          <p className="product-name-on-card">Needle 22G x 1" Regular Bevel Sterile</p>
-          <p className="product-price-on-card">Price : 1.20€</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/1/1/11-81-3890.jpg" />   
-          <Card.Body> 
-          <p className="product-name-on-card">Life/form® Complete Child CriSis Mankin with IV Arm </p>
-          <p className="product-price-on-card">Price : 180€</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
-
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/1/01-37-3000.jpg" />   
-          <Card.Body> 
-          <p className="product-name-on-card">Pocket Nurse® Pre-Filled IV Therapy Tote </p>
-          <p className="product-price-on-card">Price : 40€</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
-
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/6/06-93-1090.jpg" />   
-          <Card.Body> 
-          <p className="product-name-on-card">Demo Dose® Steril Water 3000mL </p>
-          <p className="product-price-on-card">Price : 1.20€</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
-
-     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-     <Card className="image-box card">
-          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/4/04-50-6602_4.jpg" />   
-          <Card.Body> 
-          <p className="product-name-on-card">Clinton Blood Drawing Chair with Flip Arm and Drawer </p>
-          <p className="product-price-on-card">Price : 450€</p>
-               
-          </Card.Body>
-          </Card>
-     </Col>
-
- 
-</Row>
-
-
-                   </Container>
-
-              </Fragment>
-          )
+          <Row>{MyView}</Row>
+        </Container>
+      </Fragment>
+    );
      }
 }
 
