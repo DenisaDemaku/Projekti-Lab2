@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import {Container,Row,Col,Card} from 'react-bootstrap'
-import AppURL from "../../api/AppURL";
-import axios from "axios";
+import { Link } from 'react-router-dom'
+import AppURL from '../../api/AppURL';
+import axios from 'axios'
 
 class FeaturedProducts extends Component {
     constructor(){
