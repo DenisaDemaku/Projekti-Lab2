@@ -12,8 +12,6 @@ export class FooterDesktop extends Component {
     super();
     this.state = {
       address: "",
-      android_app_link: "",
-      ios_app_link: "",
       facbook_link: "",
       twitter_link: "",
       instagram_link: "",
@@ -32,8 +30,6 @@ export class FooterDesktop extends Component {
           let JsonData = response.data[0];
           this.setState({
             address: JsonData["address"],
-            android_app_link: JsonData["android_app_link"],
-            ios_app_link: JsonData["ios_app_link"],
             facbook_link: JsonData["facbook_link"],
             twitter_link: JsonData["twitter_link"],
             instagram_link: JsonData["instagram_link"],
