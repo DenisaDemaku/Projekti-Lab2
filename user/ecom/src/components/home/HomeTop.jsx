@@ -9,9 +9,10 @@ class HomeTop extends Component {
      
      constructor(){
           super();
-          this.state ={
-               MenuData:[]
-          }
+          this.state = {
+            MenuData: [],
+            SliderData: [],
+          };
      }
 
      componentDidMount(){
@@ -21,6 +22,12 @@ class HomeTop extends Component {
           }).catch(error=>{
 
           });
+          axios
+            .get(AppURL.AllSlider)
+            .then((response) => {
+              this.setState({ SliderData: response.data });
+            })
+            .catch((error) => {});
      }
 
 
@@ -28,20 +35,20 @@ class HomeTop extends Component {
 
      render() {
           return (
-               <Fragment>
-        <Container className="p-0 m-0 overflow-hidden" fluid={true}>
-                         <Row>
-                              <Col lg={3} md={3} sm={12}>
-                              <MegaMenu data={this.state.MenuData} />
-                              </Col>
+            <Fragment>
+              <Container className="p-0 m-0 overflow-hidden" fluid={true}>
+                <Row>
+                  <Col lg={3} md={3} sm={12}>
+                    <MegaMenu data={this.state.MenuData} />
+                  </Col>
 
-                              <Col lg={9} md={9} sm={12}>
-                              <HomeSlider />
-                              </Col>
-                         </Row>
-                    </Container>
-               </Fragment>
-          )
+                  <Col lg={9} md={9} sm={12}>
+                    <HomeSlider data={this.state.SliderData} />
+                  </Col>
+                </Row>
+              </Container>
+            </Fragment>
+          );
      }
 }
 
