@@ -22,7 +22,7 @@ class MegaMenu extends Component {
      }
 
 
-    rendxer(){
+     render() {
 
           const CatList = this.props.data;
 
