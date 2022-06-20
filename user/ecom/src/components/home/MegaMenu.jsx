@@ -1,15 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import { Link } from 'react-router-dom';
-
 class MegaMenu extends Component {
-
      constructor(props){
           super();
            
      }
  
  
-
      MenuItemClick=(event)=>{
           event.target.classList.toggle("active");
           var panel = event.target.nextElementSibling;
@@ -18,11 +15,10 @@ class MegaMenu extends Component {
           }else{
                panel.style.maxHeight= panel.scrollHeight+ "px"
           }
-
      }
 
 
-     render() {
+     render() { 
 
           const CatList = this.props.data;
 
@@ -36,7 +32,6 @@ class MegaMenu extends Component {
           {
                (CatList.subcategory_name).map((SubList,i)=>{
                     return <li><Link to={"productsubcategory/"+CatList.category_name+"/"+SubList.subcategory_name } className="accordionItem" >{SubList.subcategory_name} </Link></li>
-
                })    
           }
           
@@ -44,26 +39,15 @@ class MegaMenu extends Component {
          </div> 
              
                </div>
-
-
-
           });
-
-
-
-
-
           return (
               <div className="accordionMenuDiv">
                    <div className="accordionMenuDivInside">
-
                {MyView}
    
                    </div>
-
               </div>
           )
      }
 }
-
 export default MegaMenu

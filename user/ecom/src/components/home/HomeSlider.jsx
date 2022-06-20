@@ -9,71 +9,65 @@ import Slider3 from '../../assets/images/slider3.jpg';
 
 
 class HomeSlider extends Component {
-     render() {
+  render() {
+       var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed:3000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: 0,
+            arrows: false,
+            responsive: [
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  infinite: true,
+                  dots: true
+                }
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  initialSlide: 2
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          };
 
-          var settings = {
-               dots: true,
-               infinite: true,
-               speed: 500,
-               autoplay: true,
-               autoplaySpeed:3000,
-               slidesToShow: 1,
-               slidesToScroll: 1,
-               initialSlide: 0,
-               arrows: false,
-               responsive: [
-                 {
-                   breakpoint: 1024,
-                   settings: {
-                     slidesToShow: 1,
-                     slidesToScroll: 1,
-                     infinite: true,
-                     dots: true
-                   }
-                 },
-                 {
-                   breakpoint: 600,
-                   settings: {
-                     slidesToShow: 1,
-                     slidesToScroll: 1,
-                     initialSlide: 2
-                   }
-                 },
-                 {
-                   breakpoint: 480,
-                   settings: {
-                     slidesToShow: 1,
-                     slidesToScroll: 1
-                   }
-                 }
-               ]
-             };
 
+          const SliderData = this.props.data;
+          const MyView = SliderData.map((SliderList,i)=>{
+           return  <div key={i.toString()}>
+           <img className="slider-img" src={SliderList.slider_image} />
+          </div>
+          })
 
-          return (
-             <div>
+       return (
+          <div>
 
 
 <Slider {...settings}>
-          <div>
-           <img className="slider-img" src={Slider1} />
-          </div>
-          <div>
-          <img className="slider-img" src={Slider2} />
-          </div>
-          <div>
-          <img className="slider-img" src={Slider3} />
-          </div>
-           
-        </Slider>
+  
+{MyView}
 
+</Slider>
 
-
-
-
-             </div>
-          )
-     }
+     </div>
+  )
 }
-
+}
 export default HomeSlider
