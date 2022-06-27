@@ -12,6 +12,7 @@ import ProductDetailsPage from '../pages/ProductDetailsPage';
 import ProductSubCategoryPage from '../pages/ProductSubCategoryPage';
 import PurchasePage from '../pages/PurchasePage';
 import SearchPage from "../pages/SearchPage";
+import RegisterPage from "../pages/RegisterPage";
 import RefundPage from '../pages/RefundPage';
 import UserLoginPage from '../pages/UserLoginPage';
 
@@ -24,6 +25,14 @@ class AppRoute extends Component {
                   exact
                   path="/"
                   render={(props) => <HomePage {...props} key={Date.now()} />}
+                />
+                
+                <Route
+                  exact
+                  path="/register"
+                  render={(props) => (
+                    <RegisterPage {...props} key={Date.now()} />
+                  )}
                 />
 
                 <Route
