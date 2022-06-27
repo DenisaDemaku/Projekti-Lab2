@@ -15,6 +15,23 @@ class ProductDetails extends Component {
                ReactDOM.findDOMNode(previewImg).setAttribute('src',imgSrc)
      }
 
+     
+     PriceOption(price,special_price){
+          if(special_price=="na"){
+               return (
+            <p className="product-price-on-card"> Price : {price}$ </p>
+               )
+          }else{
+
+               return (
+                    <p className="product-price-on-card">
+                      Price : <strike className="text-secondary">{price}$ </strike> {special_price}$ 
+                          </p>
+               )
+
+          }
+     }
+
 
      render() {
 
@@ -100,11 +117,11 @@ class ProductDetails extends Component {
           <Col className="p-3 " md={6} lg={6} sm={12} xs={12}>
           <h5 className="Product-Name"> {title} </h5>
           <h6 className="section-sub-title"> {short_description} </h6>
-          <div className="input-group">
-          <div className="Product-price-card d-inline ">Reguler Price ${price}</div>
-               <div className="Product-price-card d-inline ">50% Discount</div>
-               <div className="Product-price-card d-inline ">New Price ${special_price}</div>
-          </div>
+          
+
+          {this.PriceOption(price,special_price)}
+
+
           <h6 className="mt-2">Category : <b>{category}</b>  </h6>          
 
           <h6 className="mt-2">SubCategory : <b>{subcategory}</b></h6>
@@ -150,7 +167,7 @@ class ProductDetails extends Component {
                </select> 
                </div>
 
-               
+
            <div className="input-group mt-3">
                <button className="btn site-btn m-1 "> <i className="fa fa-shopping-cart"></i>  Add To Cart</button>
                <button className="btn btn-primary m-1"> <i className="fa fa-car"></i> Order Now</button>
