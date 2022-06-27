@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import {Navbar,Container, Row, Col,Button} from 'react-bootstrap';
 import Logo from '../../assets/images/logo.png';
 import Bars from '../../assets/images/bars.png';
-import {Link} from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import MegaMenuAll from '../home/MegaMenuAll';
  
    
@@ -15,6 +15,9 @@ import MegaMenuAll from '../home/MegaMenuAll';
        Searchkey: "",
        SearchRedirectStauts: false,
      };
+     this.SearchOnChange = this.SearchOnChange.bind(this);
+     this.SeachOnClick = this.SeachOnClick.bind(this);
+     this.searchRedirect = this.searchRedirect.bind(this);
    }
    SearchOnChange(event) {
      let Searchkey = event.target.value;
@@ -25,6 +28,11 @@ import MegaMenuAll from '../home/MegaMenuAll';
    SeachOnClick() {
      if (this.state.Searchkey.length >= 2) {
        this.setState({ SearchRedirectStauts: true });
+     }
+   }
+   searchRedirect() {
+     if (this.state.SearchRedirectStauts === true) {
+       return <Redirect to={"/productbysearch/" + this.state.Searchkey} />;
      }
    }
 
@@ -92,7 +100,7 @@ import MegaMenuAll from '../home/MegaMenuAll';
                      </Button>
                    </div>
                  </Col>
-                 
+
                  <Col className="p-1 mt-1" lg={4} md={4} sm={12} xs={12}>
                    <Link to="/favourite" className="btn">
                      <i className="fa h4 fa-heart"></i>
@@ -117,6 +125,7 @@ import MegaMenuAll from '../home/MegaMenuAll';
                    </Link>
                  </Col>
                </Row>
+               {this.searchRedirect()}
              </Container>
            </Navbar>
          </div>
