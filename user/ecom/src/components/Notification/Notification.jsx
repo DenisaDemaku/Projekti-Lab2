@@ -1,13 +1,34 @@
 import React, { Component, Fragment } from 'react'
 import { Container,Row,Col, Card,Button,Modal } from 'react-bootstrap'
+import AppURL from '../../api/AppURL';
+import axios from 'axios'
+
 class Notification extends Component {
 
      constructor(){
           super();
           this.state={
                show:false,
+               NotificationData:[],
+               isLoading:"",
+               mainDiv:"d-none"
           }
      }
+
+    
+
+     componentDidMount(){
+        axios.get(AppURL.NotificationHistory).then(response =>{
+
+             this.setState({NotificationData:response.data,isLoading:"d-none",
+             mainDiv:" "});         
+
+        }).catch(error=>{
+
+        });
+   } 
+
+
 
       handleClose = () =>{
           this.setState({ show:false})
@@ -18,72 +39,34 @@ class Notification extends Component {
       }; 
 
      render() {
-          return (
-               <Fragment>
-
-                    <Container className="TopSection">
-    <Row>
-        <Col className=" p-1 " md={6} lg={6} sm={12} xs={12}>
+          
+        const NotificationList = this.state.NotificationData;
+        const MyView = NotificationList.map((NotificationList,i)=>{
+          return   <Col className=" p-1 " md={6} lg={6} sm={12} xs={12}>
             <Card onClick={this.handleShow} className="notification-card">
                 <Card.Body>
-                    <h6> Lorem Ipsum is simply dummy text of the printing</h6>
-                    <p className="py-1  px-0 text-primary m-0"><i className="fa  fa-bell"></i>   Date: 04/05/2022 | Status: Unread</p>
+                <h6>{NotificationList.title}</h6>
+                    <p className="py-1  px-0 text-primary m-0"><i className="fa  fa-bell"></i>   Date: {NotificationList.date} | Status: Unread</p>
+
+   <Button className="btn btn-danger">Details </Button>
                 </Card.Body>
             </Card>
         </Col>
 
-        <Col className=" p-1 " md={6} lg={6} sm={12} xs={12}>
-            <Card onClick={this.handleShow} className="notification-card">
-                <Card.Body>
-                    <h6> Lorem Ipsum is simply dummy text of the printing</h6>
-                    <p className="py-1   px-0 text-primary m-0"><i className="fa  fa-bell"></i>   Date: 04/05/2022 | Status: Unread</p>
-                </Card.Body>
-            </Card>
-        </Col>
+        
+    })
+        
 
-        <Col className="p-1" md={6} lg={6} sm={12} xs={12}>
-            <Card  className="notification-card">
-                <Card.Body>
-                    <h6> Lorem Ipsum is simply dummy text of the printing</h6>
-                    <p className="py-1  px-0 text-success m-0"><i className="fa  fa-bell"></i>   Date: 04/05/2022 | Status: Read</p>
-                </Card.Body>
-            </Card>
+       
+    return (
+        <Fragment>
 
-        </Col>
+       <Container className="TopSection">    
 
-        <Col className="p-1" md={6} lg={6} sm={12} xs={12}>
+       <Row>
 
-            <Card className="notification-card">
-                <Card.Body>
-                    <h5> Lorem Ipsum is simply dummy text of the printing</h5>
-                    <p className="py-1  px-0 text-success m-0"><i className="fa fa-bell"></i>   Date: 04/05/2022 | Status: Read</p>
-                </Card.Body>
-            </Card>
-
-        </Col>
-
-        <Col className="p-1" md={6} lg={6} sm={12} xs={12}>
-
-            <Card className="notification-card">
-                <Card.Body>
-                    <h6> Lorem Ipsum is simply dummy text of the printing</h6>
-                    <p className="py-1  px-0 text-success m-0"><i className="fa  fa-bell"></i>   Date: 04/05/2022 | Status: Read</p>
-                </Card.Body>
-            </Card>
-
-        </Col>
-
-        <Col className="p-1" md={6} lg={6} sm={12} xs={12}>
-
-            <Card className="notification-card">
-                <Card.Body>
-                    <h6> Lorem Ipsum is simply dummy text of the printing</h6>
-                    <p className="py-1 px-0 text-success m-0"><i className="fa  fa-bell"></i>   Date: 04/05/2022 | Status: Read</p>
-                </Card.Body>
-            </Card>
-
-        </Col>
-
+            {MyView}
+            
     </Row>
 </Container>
 
