@@ -24,12 +24,13 @@ class AppURL {
      }
 
      static NotificationHistory = this.BaseURL+"/notification"
-     
+
      static ProductBySearch(searchkey){
           return this.BaseURL+"/search/"+searchkey;
      }
 
      static UserLogin = this.BaseURL+"/login"
+     static UserData = this.BaseURL+"/user"
 
 }
 
