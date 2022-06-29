@@ -18,13 +18,19 @@ class AppURL {
      }
 
      static AllSlider = this.BaseURL+"/allslider"
-     
+
      static ProductDetails(code){
           return this.BaseURL+"/productdetails/"+code;
      }
-     
+
      static NotificationHistory = this.BaseURL+"/notification"
      
+     static ProductBySearch(searchkey){
+          return this.BaseURL+"/search/"+searchkey;
+     }
+
+     static UserLogin = this.BaseURL+"/login"
+
 }
 
 export default AppURL
