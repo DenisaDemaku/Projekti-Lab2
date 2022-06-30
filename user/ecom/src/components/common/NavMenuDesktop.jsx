@@ -7,6 +7,7 @@ import MegaMenuAll from '../home/MegaMenuAll';
  
    
  class NavMenuDesktop extends Component {
+
    constructor() {
      super();
      this.state = {
@@ -19,6 +20,11 @@ import MegaMenuAll from '../home/MegaMenuAll';
      this.SeachOnClick = this.SeachOnClick.bind(this);
      this.searchRedirect = this.searchRedirect.bind(this);
    }
+
+   logout = () => {
+    localStorage.clear();
+}
+
    SearchOnChange(event) {
      let Searchkey = event.target.value;
      // alert(Searchkey);
@@ -72,7 +78,7 @@ import MegaMenuAll from '../home/MegaMenuAll';
              </Link>
 
              <Link to="/profile" className="h4 btn">PROFILE</Link>
-             <Link to="/register" className="h4 btn">LOGOUT</Link>
+             <Link to="/" onClick={this.logout} className="h4 btn">LOGOUT</Link>
 
  <Link to="/cart" className="cart-btn"><i className="fa fa-shopping-cart"></i> 3 Items </Link>
               </div> 
