@@ -112,13 +112,7 @@ export class ResetPassword extends Component {
                       }}
                     />
 
-                    <Button
-                      type="submit"
-                      className="btn btn-block m-2 site-btn-login"
-                    >
-                      {" "}
-                      Reset Password{" "}
-                    </Button>
+               
                   </Form>
                 </Col>
 
