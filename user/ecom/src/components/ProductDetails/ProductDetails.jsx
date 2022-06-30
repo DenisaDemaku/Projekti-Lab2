@@ -94,134 +94,259 @@ class ProductDetails extends Component {
 
 
           return (
-               <Fragment>
-               <Container fluid={true}  className="BetweenTwoSection">
-                    
-               <div className="breadbody">
-               <Breadcrumb>
-  <Breadcrumb.Item> <Link to="/"> Home </Link> </Breadcrumb.Item>
+            <Fragment>
+              <Container fluid={true} className="BetweenTwoSection">
+                <div className="breadbody">
+                  <Breadcrumb>
+                    <Breadcrumb.Item>
+                      {" "}
+                      <Link to="/"> Home </Link>{" "}
+                    </Breadcrumb.Item>
 
-  <Breadcrumb.Item> <Link to={"/productcategory/"+category}> {category } </Link> </Breadcrumb.Item> 
+                    <Breadcrumb.Item>
+                      {" "}
+                      <Link to={"/productcategory/" + category}>
+                        {" "}
+                        {category}{" "}
+                      </Link>{" "}
+                    </Breadcrumb.Item>
 
-  <Breadcrumb.Item> <Link to={"/productsubcategory/"+category+"/"+subcategory}> {subcategory } </Link> </Breadcrumb.Item>
+                    <Breadcrumb.Item>
+                      {" "}
+                      <Link
+                        to={
+                          "/productsubcategory/" + category + "/" + subcategory
+                        }
+                      >
+                        {" "}
+                        {subcategory}{" "}
+                      </Link>{" "}
+                    </Breadcrumb.Item>
 
-    <Breadcrumb.Item> <Link to={"/productdetails/"+product_id}> {title } </Link> </Breadcrumb.Item>   
+                    <Breadcrumb.Item>
+                      {" "}
+                      <Link to={"/productdetails/" + product_id}>
+                        {" "}
+                        {title}{" "}
+                      </Link>{" "}
+                    </Breadcrumb.Item>
+                  </Breadcrumb>
+                </div>
 
-</Breadcrumb>
-</div>
+                <Row className="p-2">
+                  <Col
+                    className="shadow-sm bg-white pb-3 mt-4"
+                    md={12}
+                    lg={12}
+                    sm={12}
+                    xs={12}
+                  >
+                    <Row>
+                      <Col className="p-3" md={6} lg={6} sm={12} xs={12}>
+                        <img
+                          id="previewImg"
+                          className="bigimage"
+                          src={image_one}
+                        />
+                        <div className="bigimage">
+                          <InnerImageZoom
+                            zoomScale={1.8}
+                            zoomType={"hover"}
+                            src={image_one}
+                            zoomSrc={image_one}
+                          />
+                        </div>
+                        <Container className="my-3">
+                          <Row>
+                            <Col
+                              className="p-0 m-0"
+                              md={3}
+                              lg={3}
+                              sm={3}
+                              xs={3}
+                            >
+                              <img
+                                onClick={this.imgOnClick}
+                                className="w-100 smallimage product-sm-img"
+                                src={image_one}
+                              />
+                            </Col>
+                            <Col
+                              className="p-0 m-0"
+                              md={3}
+                              lg={3}
+                              sm={3}
+                              xs={3}
+                            >
+                              <img
+                                onClick={this.imgOnClick}
+                                className="w-100 smallimage product-sm-img"
+                                src={image_two}
+                              />
+                            </Col>
+                            <Col
+                              className="p-0 m-0"
+                              md={3}
+                              lg={3}
+                              sm={3}
+                              xs={3}
+                            >
+                              <img
+                                onClick={this.imgOnClick}
+                                className="w-100 smallimage product-sm-img"
+                                src={image_three}
+                              />
+                            </Col>
+                            <Col
+                              className="p-0 m-0"
+                              md={3}
+                              lg={3}
+                              sm={3}
+                              xs={3}
+                            >
+                              <img
+                                onClick={this.imgOnClick}
+                                className="w-100 smallimage product-sm-img"
+                                src={image_four}
+                              />
+                            </Col>
+                          </Row>
+                        </Container>
+                      </Col>
+                      <Col className="p-3 " md={6} lg={6} sm={12} xs={12}>
+                        <h5 className="Product-Name"> {title} </h5>
+                        <h6 className="section-sub-title">
+                          {" "}
+                          {short_description}{" "}
+                        </h6>
 
+                        {this.PriceOption(price, special_price)}
 
-                   <Row className="p-2">
-<Col className="shadow-sm bg-white pb-3 mt-4" md={12} lg={12} sm={12} xs={12}>
-     <Row>
-          <Col className="p-3" md={6} lg={6} sm={12} xs={12}>
-          <img id="previewImg" className="bigimage" src={image_one} />
-          
-          <Container  className="my-3">
-               <Row>
-                    <Col className="p-0 m-0"  md={3} lg={3} sm={3} xs={3}>
-                    <img onClick={this.imgOnClick} className="w-100 smallimage product-sm-img" src={image_one} />
-                    </Col>
-                    <Col className="p-0 m-0" md={3} lg={3} sm={3} xs={3}>
-                    <img onClick={this.imgOnClick} className="w-100 smallimage product-sm-img" src={image_two} />
-                    </Col>
-                    <Col className="p-0 m-0" md={3} lg={3} sm={3} xs={3}>
-                    <img onClick={this.imgOnClick} className="w-100 smallimage product-sm-img" src={image_three} />
-                    </Col>
-                    <Col className="p-0 m-0" md={3} lg={3} sm={3} xs={3}>
-                    <img onClick={this.imgOnClick} className="w-100 smallimage product-sm-img" src={image_four} />
-                    </Col>
-               </Row>
-          </Container>
-          </Col>
-          <Col className="p-3 " md={6} lg={6} sm={12} xs={12}>
-          <h5 className="Product-Name"> {title} </h5>
-          <h6 className="section-sub-title"> {short_description} </h6>
-          
+                        <h6 className="mt-2">
+                          Category : <b>{category}</b>{" "}
+                        </h6>
 
-          {this.PriceOption(price,special_price)}
+                        <h6 className="mt-2">
+                          SubCategory : <b>{subcategory}</b>
+                        </h6>
 
+                        <h6 className="mt-2">
+                          Brand : <b>{brand}</b>
+                        </h6>
 
-          <h6 className="mt-2">Category : <b>{category}</b>  </h6>          
+                        <h6 className="mt-2">
+                          Product Code : <b>{product_code}</b>
+                        </h6>
 
-          <h6 className="mt-2">SubCategory : <b>{subcategory}</b></h6>
+                        <div className={ColorDiv}>
+                          <h6 className="mt-2"> Choose Color </h6>
+                          <select className="form-control form-select">
+                            <option>Choose Color</option>
+                            {ColorOption}
+                          </select>
+                        </div>
 
-          <h6 className="mt-2">Brand : <b>{brand}</b></h6>
+                        <div className={SizeDiv}>
+                          <h6 className="mt-2"> Choose Size </h6>
+                          <select className="form-control form-select">
+                            <option>Choose Size</option>
+                            {SizeOption}
+                          </select>
+                        </div>
 
-          <h6 className="mt-2">Product Code : <b>{product_code}</b></h6>
+                        <div className="">
+                          <h6 className="mt-2"> Choose Quantity </h6>
+                          <select className="form-control form-select">
+                            <option>Choose Quantity</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                          </select>
+                        </div>
 
+                        <div className="input-group mt-3">
+                          <button className="btn site-btn m-1 ">
+                            {" "}
+                            <i className="fa fa-shopping-cart"></i> Add To Cart
+                          </button>
+                          <button className="btn btn-primary m-1">
+                            {" "}
+                            <i className="fa fa-car"></i> Order Now
+                          </button>
+                          <button className="btn btn-primary m-1">
+                            {" "}
+                            <i className="fa fa-heart"></i> Favourite
+                          </button>
+                        </div>
+                      </Col>
+                    </Row>
 
-               
-          <div className={ColorDiv}>
-               <h6 className="mt-2"> Choose Color  </h6>
-               <select className="form-control form-select">
-               <option>Choose Color</option>
-               {ColorOption}
-               </select> 
-               </div>
+                    <Row>
+                      <Col className="" md={6} lg={6} sm={12} xs={12}>
+                        <h6 className="mt-2">DETAILS</h6>
+                        <p> {long_description} </p>
+                      </Col>
 
+                      <Col className="" md={6} lg={6} sm={12} xs={12}>
+                        <h6 className="mt-2">REVIEWS</h6>
+                        <p className=" p-0 m-0">
+                          <span className="Review-Title">Denisë Demaku</span>{" "}
+                          <span className="text-success">
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                          </span>{" "}
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt ut
+                          laoreet dolore magna aliquam erat volutpat.
+                        </p>
 
-               <div className={SizeDiv}>
-               <h6 className="mt-2"> Choose Size  </h6>
-               <select className="form-control form-select">
-               <option>Choose Size</option>
-               {SizeOption}
-               </select> 
-               </div>
+                        <p className=" p-0 m-0">
+                          <span className="Review-Title">Era Salihu</span>{" "}
+                          <span className="text-success">
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                          </span>{" "}
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt ut
+                          laoreet dolore magna aliquam erat volutpat.
+                        </p>
 
-               <div className="" >
-               <h6 className="mt-2"> Choose Quantity  </h6>
-               <select className="form-control form-select">
-               <option>Choose Quantity</option>
-               <option value="01">01</option>
-               <option value="02">02</option>
-               <option value="03">03</option>
-               <option value="04">04</option>
-               <option value="05">05</option>
-               <option value="06">06</option>
-               <option value="07">07</option>
-               <option value="08">08</option>
-               <option value="09">09</option>
-               <option value="10">10</option> 
-
-               </select> 
-               </div>
-
-
-           <div className="input-group mt-3">
-               <button className="btn site-btn m-1 "> <i className="fa fa-shopping-cart"></i>  Add To Cart</button>
-               <button className="btn btn-primary m-1"> <i className="fa fa-car"></i> Order Now</button>
-               <button className="btn btn-primary m-1"> <i className="fa fa-heart"></i> Favourite</button>
-          </div>
-          </Col>
-     </Row>
-
-     <Row>
-          <Col className="" md={6} lg={6} sm={12} xs={12}>
-          <h6 className="mt-2">DETAILS</h6>
-          <p> {long_description} </p>
-          </Col>
-
-          <Col className="" md={6} lg={6} sm={12} xs={12}>
-          <h6 className="mt-2">REVIEWS</h6>
-          <p className=" p-0 m-0"><span className="Review-Title">Denisë Demaku</span> <span className="text-success"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span> </p>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-          <p className=" p-0 m-0"><span className="Review-Title">Era Salihu</span> <span className="text-success"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span> </p>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-          <p className=" p-0 m-0"><span className="Review-Title">Lizë Pira</span> <span className="text-success"><i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> <i className="fa fa-star"></i> </span> </p>
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-          </Col>
-     </Row>
-
-</Col>
-                   </Row>
-               </Container>
-               
-               </Fragment>
-          )
+                        <p className=" p-0 m-0">
+                          <span className="Review-Title">Lizë Pira</span>{" "}
+                          <span className="text-success">
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                            <i className="fa fa-star"></i>{" "}
+                          </span>{" "}
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit, sed diam nonummy nibh euismod tincidunt ut
+                          laoreet dolore magna aliquam erat volutpat.
+                        </p>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+              </Container>
+            </Fragment>
+          );
      }
 }
 
