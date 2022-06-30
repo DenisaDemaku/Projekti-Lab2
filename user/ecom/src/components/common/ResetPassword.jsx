@@ -1,12 +1,11 @@
-import React, { Component, Fragment } from 'react'
-import { Container,Row,Col, Form,Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import React, { Component, Fragment } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import AppURL from "../../api/AppURL";
-import Forget from '../../assets/images/forget.jpg'
+import Forget from "../../assets/images/forget.jpg";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 export class ResetPassword extends Component {
   constructor() {
@@ -112,7 +111,13 @@ export class ResetPassword extends Component {
                       }}
                     />
 
-               
+                    <Button
+                      type="submit"
+                      className="btn btn-block m-2 site-btn-login"
+                    >
+                      {" "}
+                      Reset Password{" "}
+                    </Button>
                   </Form>
                 </Col>
 
@@ -129,4 +134,4 @@ export class ResetPassword extends Component {
   }
 }
 
-export default ResetPassword
+export default ResetPassword;
