@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import {Navbar,Container, Row, Col,Button} from 'react-bootstrap';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/easyshop.png';
 import Bars from '../../assets/images/bars.png';
 import {Link, Redirect} from "react-router-dom";
 import MegaMenuAll from '../home/MegaMenuAll';
@@ -110,7 +110,7 @@ import AppURL from '../../api/AppURL';
                    <Link to="/login" className="h4 btn">LOGIN</Link>
                    <Link to="/register" className="h4 btn">REGISTER</Link>
                    
-       <Link to="/cart" className="cart-btn"><i className="fa fa-shopping-cart"></i> {this.state.cartCount} Items </Link>
+       <Link to="/cart" className="cart-btn"><i className="fa fa-shopping-cart"></i> 0 Items </Link>
                     </div> 
                )
 
