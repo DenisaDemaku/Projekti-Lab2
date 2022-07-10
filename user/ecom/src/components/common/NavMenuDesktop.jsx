@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import {Navbar,Container, Row, Col,Button} from 'react-bootstrap';
-import Logo from '../../assets/images/easyshop.png';
+import Logo from '../../assets/images/logo.png';
 import Bars from '../../assets/images/bars.png';
 import {Link, Redirect} from "react-router-dom";
 import MegaMenuAll from '../home/MegaMenuAll';
