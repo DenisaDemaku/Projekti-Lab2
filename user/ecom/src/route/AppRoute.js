@@ -23,7 +23,7 @@ import axios from 'axios'
 import NavMenuDesktop from '../components/common/NavMenuDesktop';
 
 class AppRoute extends Component {
-
+     
      constructor(){
           super();
           this.state={
@@ -47,7 +47,7 @@ class AppRoute extends Component {
      render() {
           return (
      <Fragment>
-
+          
       <NavMenuDesktop user={this.state.user} setUser={this.setUser} />  
 
           <Switch>
@@ -57,7 +57,7 @@ class AppRoute extends Component {
 
  <Route exact path="/login" render={(props) => <UserLoginPage user={this.state.user} setUser={this.setUser}  {...props} key={Date.now()} /> } />
 
-  <Route exact path="/register" render={(props) => <RegisterPage user={this.state.user} setUser={this.setUser} {...props} key={Date.now()} /> } />
+ <Route exact path="/register" render={(props) => <RegisterPage user={this.state.user} setUser={this.setUser} {...props} key={Date.now()} /> } />
 
   <Route exact path="/forget" render={(props) => <ForgetPasswordPage {...props} key={Date.now()} /> } />
  
@@ -78,7 +78,7 @@ class AppRoute extends Component {
 
  <Route exact path="/about" render={(props) => <AboutPage {...props} key={Date.now()} /> } />
 
- <Route exact path="/productdetails/:code" render={(props) => <ProductDetailsPage user={this.state.user}  {...props} key={Date.now()} /> } />
+ <Route exact path="/productdetails/:code" render={(props) => <ProductDetailsPage {...props} key={Date.now()} /> } />
 
  <Route exact path="/notification" render={(props) => <NotificationPage {...props} key={Date.now()} /> } />
 
