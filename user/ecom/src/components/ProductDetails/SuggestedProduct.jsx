@@ -1,118 +1,101 @@
 import React, { Component, Fragment } from 'react'
 import {Container,Row,Col,Card} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import AppURL from '../../api/AppURL';
-import axios from 'axios'
 
 class SuggestedProduct extends Component {
-
-     constructor(){
-          super();
-          this.state={
-               ProductData:[],
-          }
-     }
-
-     componentDidMount(){ 
-          let subcategory = this.props.subcategory;
-
-          axios.get(AppURL.SimilarProduct(subcategory)).then(response =>{
-               
-               this.setState({ProductData:response.data});         
-
-          }).catch(error=>{
-
-          });
-     }
-
-
      render() {
-
-          const MyList = this.state.ProductData;
-
-          if(MyList.length>0){
-               const MyView = MyList.map((ProductList,i)=>{
-
-                    if(ProductList.special_price=="na"){
-                         return  <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                         <Link className="text-link" to={"/productdetails/"+ProductList.id} >
-              <Card className="image-box card">
-              <img className="center" src={ProductList.image} />   
-              <Card.Body> 
-             <p className="product-name-on-card">{ProductList.title}</p>
-              <p className="product-price-on-card">Price : ${ProductList.price}</p>
-                              
-              </Card.Body> 
-               </Card>
-               </Link>
-                    </Col>
-          
-                    }
-                    else{
-          
-                         return  <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                           <Link className="text-link" to={"/productdetails/"+ProductList.id} >
-              <Card className="image-box card">
-              <img className="center" src={ProductList.image} />   
-              <Card.Body> 
-             <p className="product-name-on-card">{ProductList.title}</p>
-              <p className="product-price-on-card">Price : <strike className="text-secondary">${ProductList.price}</strike> ${ProductList.special_price}</p>
-                              
-              </Card.Body>
-               </Card>
-               </Link>
-                    </Col>
-          
-                    } 
-
-               });
+          return (
+               <Fragment>
+                   <Container className="text-center" fluid={true}>
+          <div className="section-title text-center mb-55"><h2>YOU MAY ALSO LIKE </h2>
+          <p>Some Of Our Exclusive Collection, You May Like</p>
+          </div>
 
 
-               return (
-                    <Fragment>
-                        <Container className="text-center" fluid={true}>
-               <div className="section-title text-center mb-55"><h2>YOU MAY ALSO LIKE </h2>
-               <p>Some Of Our Exclusive Collection, You May Like</p>
-               </div>
-     
-      
-          <Row> 
-               {MyView}
-         </Row>
-     
-     
-                        </Container>
-     
-                   </Fragment>
-               ) 
-
-
-          } // end if conditon 
-          else{
-
-
-               return (
-                    <Fragment>
-                        <Container className="text-center" fluid={true}>
-               <div className="section-title text-center mb-55"><h2>YOU MAY ALSO LIKE </h2>
-               <p>Some Of Our Exclusive Collection, You May Like</p>
-               </div>
-     
-      
-          <p>There have no similar product </p>
-     
-     
-                        </Container>
-     
-                   </Fragment>
-               ) 
-
-
-          } // end else 
+     <Row>
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+          <Link to="/productdetails">
+     <Card className="image-box card">
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/4/04-50-6602_4.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">Clinton Blood Drawing Chair with Flip Arm and Drawer </p>
+          <p className="product-price-on-card">Price : 450€</p>
+               
+          </Card.Body>
+          </Card>
+          </Link>
+     </Col>
 
 
 
-          
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Card className="image-box card">
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/46c67a7e014cd6344be7c367252caa28/0/2/02-24-1835.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">TymPRO+ Tympanic Thermometer</p>
+          <p className="product-price-on-card">Price : 42.99</p>
+               
+          </Card.Body>
+          </Card>
+               
+               
+     </Col>
+
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Card className="image-box card">
+          <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/6/06-93-1090.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">Demo Dose® Steril Water 3000mL </p>
+          <p className="product-price-on-card">Price : 1.20€</p>
+               
+          </Card.Body>
+          </Card>
+     </Col>
+
+
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Card className="image-box card">
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/46c67a7e014cd6344be7c367252caa28/0/6/06-82-5155.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">Needle 22G x 1" Regular Bevel Sterile</p>
+          <p className="product-price-on-card">Price : 1.20€</p>
+               
+          </Card.Body>
+          </Card>
+     </Col>
+
+
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Card className="image-box card">
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/1/1/11-81-3890.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">Life/form® Complete Child CriSis Mankin with IV Arm </p>
+          <p className="product-price-on-card">Price : 180€</p>
+               
+          </Card.Body>
+          </Card>
+     </Col>
+
+
+     <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
+     <Card className="image-box card">
+     <img className="center" src="https://www.pocketnurse.com/media/catalog/product/cache/732bb65516f08b6978c23ab82b950117/0/1/01-37-3000.jpg" />   
+          <Card.Body> 
+          <p className="product-name-on-card">Pocket Nurse® Pre-Filled IV Therapy Tote </p>
+          <p className="product-price-on-card">Price : 40€</p>
+               
+          </Card.Body>
+          </Card>
+     </Col>
+
+ 
+</Row>
+
+
+                   </Container>
+
+              </Fragment>
+          ) 
      }
 }
 
