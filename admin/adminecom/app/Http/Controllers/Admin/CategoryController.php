@@ -85,6 +85,7 @@ class CategoryController extends Controller
 
     public function UpdateCategory(Request $request){
 
+<<<<<<< HEAD
         $category_id = $request->id;
 
         if ($request->file('category_image')) {
@@ -122,6 +123,8 @@ class CategoryController extends Controller
         return redirect()->route('all.category')->with($notification);
 
         }
+=======
+>>>>>>> cb5dcbc09df7fb3b03b29bc2eef7c6fd3df3bf8a
 
     } //End Method 
 
