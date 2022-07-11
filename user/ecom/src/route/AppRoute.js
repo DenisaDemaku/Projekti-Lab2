@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import {  Route, Switch } from "react-router";
+import { Router, Route, Switch } from "react-router";
 import AppURL from '../api/AppURL';
 import AboutPage from '../pages/AboutPage';
 import CartPage from '../pages/CartPage';
@@ -21,7 +21,7 @@ import SearchPage from '../pages/SearchPage';
 import UserLoginPage from '../pages/UserLoginPage';
 import axios from 'axios' 
 import NavMenuDesktop from '../components/common/NavMenuDesktop';
-import BrandPage from '../pages/BrandPage';
+import OrderListPage from '../pages/OrderListPage';
 
 class AppRoute extends Component {
 
@@ -71,8 +71,6 @@ class AppRoute extends Component {
  
  <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()} /> } />
 
- <Route exact path="/brands" render={(props) => <BrandPage {...props} key={Date.now()} /> } />
-
  <Route exact path="/purchase" render={(props) => <PurchasePage {...props} key={Date.now()} /> } />
 
  <Route exact path="/privacy" render={(props) => <PrivacyPage {...props} key={Date.now()} /> } /> 
@@ -87,13 +85,15 @@ class AppRoute extends Component {
 
  <Route exact path="/favourite" render={(props) => <FavouritePage user={this.state.user} {...props} key={Date.now()} /> } />
 
- <Route exact path="/cart" render={(props) => <CartPage {...props} key={Date.now()} /> } />
+ <Route exact path="/cart" render={(props) => <CartPage user={this.state.user} {...props} key={Date.now()} /> } />
 
  <Route exact path="/productcategory/:category" render={(props) => <ProductCategoryPage {...props} key={Date.now()} /> } />
 
  <Route exact path="/productsubcategory/:category/:subcategory" render={(props) => <ProductSubCategoryPage {...props} key={Date.now()} /> } /> 
 
  <Route exact path="/productbysearch/:searchkey" render={(props) => <SearchPage {...props} key={Date.now()} /> } /> 
+
+ <Route exact path="/orderlist" render={(props) => <OrderListPage {...props} key={Date.now()} /> } /> 
                   
 
           </Switch>
