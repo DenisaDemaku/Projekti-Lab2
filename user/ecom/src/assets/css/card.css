@@ -5,6 +5,17 @@
      border-radius: 0% !important;
      box-shadow: 0 0 4px 0 rgba(57, 78, 234, 0.1)
  }
+ 
+ .card-small {
+    max-width: 250px;
+    margin: 0 15px;
+    text-align: center;
+ }
+
+ .card-small img {
+    margin: 0 auto;
+ }
+
  .card:hover {
      border-radius: 0% !important;
      text-decoration: none;

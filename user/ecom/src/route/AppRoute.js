@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Router, Route, Switch } from "react-router";
+import {  Route, Switch } from "react-router";
 import AppURL from '../api/AppURL';
 import AboutPage from '../pages/AboutPage';
 import CartPage from '../pages/CartPage';
@@ -21,6 +21,7 @@ import SearchPage from '../pages/SearchPage';
 import UserLoginPage from '../pages/UserLoginPage';
 import axios from 'axios' 
 import NavMenuDesktop from '../components/common/NavMenuDesktop';
+import BrandPage from '../pages/BrandPage';
 
 class AppRoute extends Component {
 
@@ -69,6 +70,8 @@ class AppRoute extends Component {
 
  
  <Route exact path="/contact" render={(props) => <ContactPage {...props} key={Date.now()} /> } />
+
+ <Route exact path="/brands" render={(props) => <BrandPage {...props} key={Date.now()} /> } />
 
  <Route exact path="/purchase" render={(props) => <PurchasePage {...props} key={Date.now()} /> } />
 

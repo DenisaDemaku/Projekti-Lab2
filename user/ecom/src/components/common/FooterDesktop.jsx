@@ -85,6 +85,11 @@ export class FooterDesktop extends Component {
                   Contact Us
                 </Link>
                 <br></br>
+                <Link to="/brands" className="footer-link">
+                  {" "}
+                  Brands
+                </Link>
+                <br></br>
               </Col>
 
               <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
