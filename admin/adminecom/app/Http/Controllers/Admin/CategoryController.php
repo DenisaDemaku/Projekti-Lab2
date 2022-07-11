@@ -85,7 +85,6 @@ class CategoryController extends Controller
 
     public function UpdateCategory(Request $request){
 
-<<<<<<< HEAD
         $category_id = $request->id;
 
         if ($request->file('category_image')) {
@@ -123,10 +122,46 @@ class CategoryController extends Controller
         return redirect()->route('all.category')->with($notification);
 
         }
-=======
->>>>>>> cb5dcbc09df7fb3b03b29bc2eef7c6fd3df3bf8a
 
     } //End Method 
+
+
+
+    public function DeleteCategory($id){
+
+    Category::findOrFail($id)->delete();
+
+    $notification = array(
+            'message' => 'Category Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);     
+
+    } //End Method 
+
+
+
+///////////// Start Sub Category All Methods. ////////////////
+
+
+    public function GetAllSubCategory(){
+   $subcategory = Subcategory::latest()->get();
+        return view('backend.subcategory.subcategory_view',compact('subcategory'));
+
+    } //End Method 
+
+
+    public function AddSubCategory(){
+
+        $category = Category::latest()->get();
+         return view('backend.subcategory.subcategory_add',compact('category'));
+    } //End Method 
+
+
+
+
+
 
 
     
