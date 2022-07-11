@@ -42,7 +42,7 @@ class FeaturedProducts extends Component {
     <img className="center" src={FeaturedList.image} />   
     <Card.Body> 
    <p className="product-name-on-card">{FeaturedList.title}</p>
-    <p className="product-price-on-card">Price : ${FeaturedList.price}</p>
+    <p className="product-price-on-card">Price : €{FeaturedList.price}</p>
                     
     </Card.Body> 
      </Card>
@@ -58,7 +58,7 @@ class FeaturedProducts extends Component {
     <img className="center" src={FeaturedList.image} />   
     <Card.Body> 
    <p className="product-name-on-card">{FeaturedList.title}</p>
-    <p className="product-price-on-card">Price : <strike className="text-secondary">${FeaturedList.price}</strike> ${FeaturedList.special_price}</p>
+    <p className="product-price-on-card">Price : <strike className="text-secondary">€{FeaturedList.price}</strike> €{FeaturedList.special_price}</p>
                     
     </Card.Body>
      </Card>

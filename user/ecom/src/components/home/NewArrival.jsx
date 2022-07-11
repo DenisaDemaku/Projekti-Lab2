@@ -52,7 +52,7 @@ class NewArrival extends Component {
          <img className="center" src={NewList.image} />   
          <Card.Body> 
          <p className="product-name-on-card">{NewList.title}</p>
-         <p className="product-price-on-card">Price : ${NewList.price}</p>
+         <p className="product-price-on-card">Price : €{NewList.price}</p>
               
          </Card.Body>
          </Card>
@@ -68,7 +68,7 @@ class NewArrival extends Component {
          <img className="center" src={NewList.image} />   
          <Card.Body> 
          <p className="product-name-on-card">{NewList.title}</p>
-         <p className="product-price-on-card">Price : <strike className="text-secondary">${NewList.price}</strike> ${NewList.special_price}</p>
+         <p className="product-price-on-card">Price : <strike className="text-secondary">€{NewList.price}</strike> €{NewList.special_price}</p>
               
          </Card.Body>
          </Card>

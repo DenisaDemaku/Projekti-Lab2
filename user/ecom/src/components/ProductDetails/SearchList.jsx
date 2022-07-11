@@ -22,7 +22,7 @@ class SearchList extends Component {
                 <Card.Body>
                   <p className="product-name-on-card">{ProductList.title}</p>
                   <p className="product-price-on-card">
-                    Price : ${ProductList.price}
+                    Price : €{ProductList.price}
                   </p>
                 </Card.Body>
               </Card>
@@ -43,9 +43,9 @@ class SearchList extends Component {
                   <p className="product-price-on-card">
                     Price :{" "}
                     <strike className="text-secondary">
-                      ${ProductList.price}
+                      €{ProductList.price}
                     </strike>{" "}
-                    ${ProductList.special_price}
+                    €{ProductList.special_price}
                   </p>
                 </Card.Body>
               </Card>
