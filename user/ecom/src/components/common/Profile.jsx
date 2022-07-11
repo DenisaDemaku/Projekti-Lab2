@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import {Navbar,Container, Row, Col,Button,Card,Modal,ListGroup,ListGroupItem} from 'react-bootstrap';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom';
-import Profile from '../../assets/images/profile.png'
+import Denisa from '../../assets/images/profile.png'
 class Profile extends Component {
      render() { 
 
@@ -30,7 +30,7 @@ class Profile extends Component {
                     <Col lg={4} md={4} sm={12} >
 
                     <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={Ariyan} className="userprofile" />
+  <Card.Img variant="top" src={Denisa} className="userprofile" />
  
   <ListGroup className="list-group-flush">
         
