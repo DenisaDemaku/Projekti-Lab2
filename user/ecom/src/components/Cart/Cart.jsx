@@ -168,12 +168,12 @@ class Cart extends Component {
      <label className="form-label">Choose City</label>
      <select className="form-control">
      <option value="">Choose</option>
-     <option value="Dhaka">Assam</option>
-     <option value="Dhaka">Bihar </option>
-     <option value="Dhaka">Goa </option>
-     <option value="Dhaka">Gujarat </option>
-     <option value="Dhaka">Himachal Pradesh </option>
-     <option value="Dhaka">Punjab  </option>
+     <option value="Kosovo">Prishtina</option>
+     <option value="Kosovo">Drenas </option>
+     <option value="Kosovo">Lipjan </option>
+     <option value="Kosovo">Gjilan </option>
+     <option value="Kosovo">Viti </option>
+     <option value="Kosovo">Ferizaj </option>
      </select>
 </div>
 <div className="col-md-12 p-1 col-lg-12 col-sm-12 col-12">
