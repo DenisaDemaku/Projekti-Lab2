@@ -39,10 +39,26 @@ class AdminController extends Controller
         }
         $data->save();
 
-        return redirect()->route('user.profile');
+        $notification = array(
+            'message' => 'User Profile Updated Successfully',
+            'alert-type' => 'success'
+        );
 
-    }// end mehtod 
+        return redirect()->route('user.profile')->with($notification);
 
+    } // end mehtod 
+
+
+
+    public function ChangePassword(){
+        return view('backend.admin.change_password');
+    } // end mehtod 
+
+
+    public function ChangePasswordUpdate(Request $request){
+
+
+    } // end mehtod 
 
 
 }
