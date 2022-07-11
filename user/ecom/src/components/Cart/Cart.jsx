@@ -15,6 +15,7 @@ class Cart extends Component {
                isLoading:"",
                mainDiv:"d-none",
                PageRefreshStatus:false,
+               PageRedirectStaus:false,
 
                confirmBtn:"Confirm Order",
                city:"",
@@ -144,16 +145,49 @@ class Cart extends Component {
           }
           else{
 
+               let invoice = new Date().getTime();
+               let MyFromData = new FormData();
+               MyFromData.append('city',city)
+               MyFromData.append('payment_method',payment)
+               MyFromData.append('name',name)
+               MyFromData.append('delivery_address',address)
+               MyFromData.append('email',email)
+               MyFromData.append('invoice_no',invoice)
+               MyFromData.append('delivery_charge',"00");
+
+     axios.post(AppURL.CartOrder,MyFromData).then(response =>{ 
+
+          if(response.data===1){
+               cogoToast.success("Order Request Received",{position:'top-right'}); 
+               this.setState({PageRedirectStaus:true})   
+          }else{
+               cogoToast.error("Your Request is not done ! Try Aagain",{position:'top-right'});
           }
-           
-
-
-
+               }).catch(error=>{
+                    cogoToast.error("Your Request is not done ! Try Aagain",{position:'top-right'});
+     
+               });
+          } 
 
      } // edn confim order method 
 
+     
+     PageRedirect = () => {
+          if(this.state.PageRedirectStaus===true){
+               return (
+                    <Redirect to="/orderlist" />
+               )
+
+          }
+     }
+
 
      render() { 
+
+
+          if(!localStorage.getItem('token')){
+               return <Redirect to="/login" />
+          }
 
           const MyList = this.state.ProductData;
           let totalPriceSum=0;
@@ -171,7 +205,7 @@ class Cart extends Component {
           <h5 className="product-name">{ProductList.product_name}</h5>
           <h6> Quantity = {ProductList.quantity} </h6>
           <p>{ProductList.size} | {ProductList.color}</p>
-          <h6>Price = {ProductList.unit_price} x {ProductList.quantity} = {ProductList.total_price}€</h6>
+          <h6>Price = {ProductList.unit_price} x {ProductList.quantity} = {ProductList.total_price}$</h6>
           </Col>
 
           <Col md={3} lg={3} sm={12} xs={12}>
@@ -215,7 +249,7 @@ class Cart extends Component {
                     <div className="container-fluid ">
                          <div className="row">
 <div className="col-md-12 p-1  col-lg-12 col-sm-12 col-12">
-     <h5 className="Product-Name text-danger">Total Due: {totalPriceSum}  €</h5>
+     <h5 className="Product-Name text-danger">Total Due: {totalPriceSum}  $</h5>
 </div>
 </div>
 <div className="row">
@@ -267,6 +301,8 @@ class Cart extends Component {
                </Container>
 
             {this.PageRefresh()}
+            
+            {this.PageRedirect()}
 
               </Fragment>
           )
