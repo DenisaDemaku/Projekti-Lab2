@@ -13,6 +13,7 @@ class CreateProductDetailsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('product_details');
         Schema::create('product_details', function (Blueprint $table) {
             $table->id();
             $table->integer('product_id');

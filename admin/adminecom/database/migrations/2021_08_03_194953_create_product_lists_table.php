@@ -13,6 +13,7 @@ class CreateProductListsTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('product_lists');
         Schema::create('product_lists', function (Blueprint $table) {
             $table->id();
             $table->string('title');

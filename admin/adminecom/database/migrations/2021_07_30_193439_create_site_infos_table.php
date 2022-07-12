@@ -13,6 +13,7 @@ class CreateSiteInfosTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('site_infos');
         Schema::create('site_infos', function (Blueprint $table) {
             $table->id();
             $table->text('about',50000);
