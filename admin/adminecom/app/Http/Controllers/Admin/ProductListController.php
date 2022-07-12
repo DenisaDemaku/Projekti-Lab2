@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\ProductList;
-
+ 
 class ProductListController extends Controller
 {
     public function ProductListByRemark(Request $request){
@@ -45,6 +45,22 @@ class ProductListController extends Controller
 
     }// End Method 
 
+
+    public function SimilarProduct(Request $request){
+        $subcategory = $request->subcategory;
+        $productlist = ProductList::where('subcategory',$subcategory)->orderBy('id','desc')->limit(6)->get();
+        return $productlist;
+
+    }// End Method 
+
+
+
+    public function GetAllProduct(){
+
+        $products = ProductList::latest()->get();
+        return view('backend.product.product_all',compact('products'));
+
+    } // End Method 
 
 
 
