@@ -31,7 +31,7 @@
 	 
 <link href="{{ asset('backend/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet" />
 
-	<title>Easy Shop Admin Dashboard </title>
+	<title>Medical Supplies Admin Dashboard </title>
 </head>
 
 <body>
