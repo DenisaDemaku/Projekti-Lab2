@@ -995,7 +995,7 @@ chart.render();
 			enabled: false
 		},
 		title: {
-			text: 'Traffic Sources Status. January, 2022'
+			text: 'Traffic Sources Status. January, 2021'
 		},
 		accessibility: {
 			announceNewData: {

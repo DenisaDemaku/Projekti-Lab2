@@ -144,10 +144,10 @@
 		<label for="inputCollection" class="form-label">Brand </label>
 		<select name="brand" class="form-select" id="inputCollection">
 			 <option selected="">Select Brand</option>
-			<option value="Tony">Tony</option>
-			<option value="Apple">Apple</option>
-			<option value="OPPO">OPPO</option>
-            <option value="Samsung">Samsung</option>
+			<option value="Tony">TrePharm</option>
+			<option value="Apple">Alkaloid</option>
+			<option value="OPPO">KareMedical</option>
+            <option value="Samsung">Medica</option>
 			 
 		  </select>
 	  </div>

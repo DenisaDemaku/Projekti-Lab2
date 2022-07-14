@@ -100,30 +100,7 @@
 
 
 
- 
 
-
- 
-
-
-<div class="row mb-3">
-	<div class="col-sm-3">
-		<h6 class="mb-0">android_app_link </h6>
-	</div>
-	<div class="col-sm-9 text-secondary">
-		<input type="text" name="android_app_link"  class="form-control" value="{{ $siteinfo->android_app_link }}" >
-	</div>
-</div>
- 
-
- <div class="row mb-3">
-	<div class="col-sm-3">
-		<h6 class="mb-0">ios_app_link </h6>
-	</div>
-	<div class="col-sm-9 text-secondary">
-		<input type="text" name="ios_app_link"  class="form-control" value="{{ $siteinfo->ios_app_link }}" >
-	</div>
-</div>
  
 
 
