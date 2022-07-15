@@ -14,7 +14,7 @@ class ContactController extends Controller
         $email = $request->input('email');
         $message = $request->input('message');
 
-        date_default_timezone_set("Asia/Dhaka");
+        date_default_timezone_set("Europe/Sarajevo");
         $contact_time = date("h:i:sa");
         $contact_date = date("d-m-Y");
 

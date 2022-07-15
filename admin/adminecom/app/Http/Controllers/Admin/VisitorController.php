@@ -12,7 +12,7 @@ class VisitorController extends Controller
     public function GetVisitorDetails(){
 
         $ip_address = $_SERVER['REMOTE_ADDR'];
-        date_default_timezone_set("Asia/Dhaka");
+        date_default_timezone_set("Europe/Sarajevo");
         $visit_time = date("h:i:sa");
         $visit_date = date("d-m-Y");
 

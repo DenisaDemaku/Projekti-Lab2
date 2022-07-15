@@ -111,7 +111,7 @@ class ProductCartController extends Controller
         $invoice_no = $request->input('invoice_no');
         $DeliveryCharge = $request->input('delivery_charge');
 
-        date_default_timezone_set("Asia/Dhaka");
+        date_default_timezone_set("Europe/Sarajevo");
         $request_time = date("h:i:sa");
         $request_date = date("d-m-Y");
 
@@ -121,7 +121,7 @@ class ProductCartController extends Controller
             $cartInsertDeleteResult = "";
 
             $resultInsert = CartOrder::insert([
-                'invoice_no' => "Easy".$invoice_no,
+                'invoice_no' => "MedicalSupplies".$invoice_no,
                 'product_name' => $CartListItem['product_name'],
                 'product_code' => $CartListItem['product_code'],
                 'size' => $CartListItem['size'],
