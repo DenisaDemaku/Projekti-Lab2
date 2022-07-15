@@ -21,8 +21,6 @@ class CreateSiteInfosTable extends Migration
             $table->text('parchase_guide',50000);
             $table->text('privacy',50000);
             $table->text('address',50000);
-            $table->string('android_app_link');
-            $table->string('ios_app_link');
             $table->string('facbook_link');
             $table->string('twitter_link');
             $table->string('instagram_link');
