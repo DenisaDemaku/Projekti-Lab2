@@ -50,8 +50,8 @@ export class Contact extends Component {
                else if(email.length==0){
                     alert("Please write down our Email");
                }
-               else if(!(validation.NameRegx).test(name)){
-                    alert("Invaid Name");
+               else if(name.length===0){
+                    alert("Name is required");
                }
                else{
 

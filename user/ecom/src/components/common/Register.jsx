@@ -75,7 +75,7 @@ class Register extends Component {
                     <input className="form-control m-2" type="password" placeholder="Confirm Your Password" onChange={(e)=>{this.setState({password_confirmation:e.target.value})}} />
      
      
-                    <Button type="submit" className="btn btn-block m-2 site-btn-login"> Sing Up </Button>
+                    <Button type="submit" className="btn btn-block m-2 site-btn-login"> Sign Up </Button>
      <br></br> <br></br>
      <hr />
      <p> <b> Forget My Password? </b><Link to="/forget"><b> Froget Password </b> </Link> </p>

@@ -26,7 +26,7 @@ export class OrderList extends Component {
      componentDidMount(){
           let email = this.props.user.email;
           axios.get(AppURL.OrderListByUser(email)).then(response =>{
-               
+
                this.setState({ProductData:response.data});         
 
           }).catch(error=>{
@@ -35,8 +35,8 @@ export class OrderList extends Component {
      } 
 
 
-     ReviewModalOpen = (product_code,product_name) =>{
-          this.setState({ ReviewModal:true,product_code:product_code,product_name:product_name})
+     ReviewModalOpen = (id, product_code,product_name) =>{
+          this.setState({ ReviewModal:true,product_id: id, product_code:product_code,product_name:product_name})
       };  
 
 
@@ -63,6 +63,7 @@ export class OrderList extends Component {
 
 
       PostReview = () => {
+           let product_id = this.state.product_id;
            let product_code = this.state.product_code;
            let product_name = this.state.product_name;
            let rating = this.state.rating;
@@ -84,10 +85,10 @@ export class OrderList extends Component {
           else{
                
                let MyFromData = new FormData();
+               MyFromData.append('product_id', product_id)
                MyFromData.append('product_code',product_code)
                MyFromData.append('product_name',product_name)
                MyFromData.append('reviewer_name',name)
-               MyFromData.append('reviewer_photo',"")
                MyFromData.append('reviewer_rating',rating)
                MyFromData.append('reviewer_comments',comment)
 
@@ -127,7 +128,7 @@ export class OrderList extends Component {
           <h6>Stauts = {ProductList.order_status} </h6>
           
           </Col>
-          <Button onClick={this.ReviewModalOpen.bind(this,ProductList.product_code,ProductList.product_name ) } className="btn btn-danger">Post Review </Button>
+          <Button onClick={this.ReviewModalOpen.bind(this,ProductList.id,ProductList.product_code,ProductList.product_name ) } className="btn btn-danger">Post Review </Button>
 <hr></hr>
                </div>
 

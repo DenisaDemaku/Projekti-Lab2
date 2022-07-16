@@ -181,39 +181,8 @@
 		</div>
 
  
- <script src='https://cdn.tiny.cloud/1/vdqx2klew412up5bcbpwivg1th6nrh3murc6maz8bukgos4v/tinymce/5/tinymce.min.js' referrerpolicy="origin">
-	</script>
-	<script>
-		tinymce.init({
-		  selector: '#mytextarea'
-		});
-	</script>
-
-		<script>
-		tinymce.init({
-		  selector: '#mytextarea1'
-		});
-	</script>
-
-		<script>
-		tinymce.init({
-		  selector: '#mytextarea2'
-		});
-	</script>
-
-		<script>
-		tinymce.init({
-		  selector: '#mytextarea3'
-		});
-	</script>
-
-		<script>
-		tinymce.init({
-		  selector: '#mytextarea4'
-		});
-	</script>
+ 
 
 
 
 
-@endsection
