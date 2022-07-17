@@ -108,9 +108,9 @@ Route::post('/store',[ProductListController::class, 'StoreProduct'])->name('prod
 
 Route::get('/edit/{id}',[ProductListController::class, 'EditProduct'])->name('product.edit');
 
-Route::post('/update',[SliderController::class, 'UpdateSlider'])->name('slider.update');
+Route::post('/update',[ProductListController::class, 'UpdateProduct'])->name('product.update');
  
-Route::get('/delete/{id}',[SliderController::class, 'DeleteSlider'])->name('slider.delete');
+Route::get('/delete/{id}',[ProductListController::class, 'DeleteProduct'])->name('product.delete');
 });
 
 /// Contact Message Route 

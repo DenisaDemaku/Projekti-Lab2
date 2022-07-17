@@ -105,7 +105,7 @@
 		<th>Product</th>
 		<th>Customer</th>
 		<th>Date</th>
-		<th>Price</th>
+		<th>Price</th> 
 		<th>Status</th>
 		<th>Action</th>
 	</tr>
