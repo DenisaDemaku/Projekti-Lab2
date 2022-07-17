@@ -229,13 +229,13 @@ class ProductDetails extends Component {
      PriceOption(price,special_price){
           if(special_price=="na"){
                return (
-            <p className="product-price-on-card"> Price : {price}$ </p>
+            <p className="product-price-on-card"> Price : {price}€ </p>
                )
           }else{
 
                return (
                     <p className="product-price-on-card">
-                      Price : <strike className="text-secondary">{price}$ </strike> {special_price}$ 
+                      Price : <strike className="text-secondary">{price}€ </strike> {special_price}€ 
                           </p>
                )
 

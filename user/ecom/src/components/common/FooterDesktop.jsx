@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import Apple from '../../assets/images/apple.png'
-import Google from '../../assets/images/google.png'
+
 import AppURL from "../../api/AppURL";
 import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
